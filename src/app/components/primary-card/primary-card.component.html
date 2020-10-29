@@ -1,0 +1,15 @@
+<div class="container-card">
+  <div class="container-card__container-image">
+    <img [src]="configCard.img" alt="" />
+  </div>
+
+  <div class="container-card__person-name">
+    {{ configCard.personName }}
+  </div>
+
+  <div class="container-card__person-profession">
+    {{ configCard.profession }} - {{ configCard.origin }}
+  </div>
+
+  <app-button-dark class="margin-top"></app-button-dark>
+</div>
