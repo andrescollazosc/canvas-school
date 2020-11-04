@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardsPageComponent } from './pages/cards-page/cards-page.component';
 import { PrimaryCardComponent } from './components/primary-card/primary-card.component';
 import { ButtonDarkComponent } from './components/button-dark/button-dark.component';
+import { ServiceCardComponent } from './components/service-card/service-card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ButtonDarkComponent } from './components/button-dark/button-dark.compon
     NavbarComponent,
     CardsPageComponent,
     PrimaryCardComponent,
-    ButtonDarkComponent
+    ButtonDarkComponent,
+    ServiceCardComponent
   ],
   imports: [
     BrowserModule,

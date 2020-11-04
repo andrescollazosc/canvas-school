@@ -1,0 +1,55 @@
+@import "../../styles/typography";
+@import "../../styles/base";
+
+.container-main {
+    text-decoration: none;
+}
+
+.container-card {
+  border-radius: 4px;
+  background: $primary-color;
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.2);
+  height: 183px;
+  margin-bottom: 35px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  cursor: pointer;
+
+  &__container-image {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+  }
+
+  &__container-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+  }
+
+  &__container-title {
+    font-family: Spartan, sans-serif;
+    color: $letter-color;
+    font-weight: 600;
+    height: 50%;
+    padding: 15px 0 0 15px;
+  }
+
+  &__container-value {
+    font-family: Spartan, sans-serif;
+    color: $value-color;
+    font-size: 12px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &__message {
+    color: $green-color;
+    text-transform: uppercase;
+  }
+}
