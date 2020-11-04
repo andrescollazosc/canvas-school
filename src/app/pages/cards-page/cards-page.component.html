@@ -9,3 +9,15 @@
     class="col-12 col-sm-12 col-md-5 col-lg-4"
   ></app-primary-card>
 </div>
+
+<hr />
+<h3>Services cards</h3>
+
+<div class="row">
+  <app-service-card
+    *ngFor="let item of configServiceCard"
+    [configCard]="item"
+    (onClickEmit)="onClick($event)"
+    class="col-12 col-sm-12 col-md-5 col-lg-4"
+  ></app-service-card>
+</div>

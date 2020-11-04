@@ -1,0 +1,17 @@
+<a (click)="onClick(configCard)" class="container-main" >
+    <div class="container-card">
+        <div class="container-card__container-image">
+            <img [src]="configCard.icon" alt="">
+        </div>
+        <div class="container-card__container-title">
+            {{ configCard.title }}
+        </div>
+        <span *ngIf="configCard.value !== 0" class="container-card__container-value">
+            {{ configCard.value }}
+        </span>
+        <span *ngIf="configCard.value === 0" class="container-card__container-value container-card__message">
+            Pagada
+        </span>
+
+    </div>
+</a>
