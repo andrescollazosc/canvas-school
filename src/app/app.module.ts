@@ -8,6 +8,8 @@ import { CardsPageComponent } from './pages/cards-page/cards-page.component';
 import { PrimaryCardComponent } from './components/primary-card/primary-card.component';
 import { ButtonDarkComponent } from './components/button-dark/button-dark.component';
 import { ServiceCardComponent } from './components/service-card/service-card.component';
+import { CityCardComponent } from './components/city-card/city-card.component';
+import { ButtonGoogleComponent } from './components/button-google/button-google.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ServiceCardComponent } from './components/service-card/service-card.com
     CardsPageComponent,
     PrimaryCardComponent,
     ButtonDarkComponent,
-    ServiceCardComponent
+    ServiceCardComponent,
+    CityCardComponent,
+    ButtonGoogleComponent
   ],
   imports: [
     BrowserModule,

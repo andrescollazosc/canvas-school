@@ -1,0 +1,15 @@
+@import '../../styles/base';
+@import '../../styles/typography';
+
+.btn{
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: $sky-blue-google;
+    border: 1px solid $sky-gray-google;
+    height: 38px;
+}
+
+button:hover{
+    filter: brightness(80%);
+}

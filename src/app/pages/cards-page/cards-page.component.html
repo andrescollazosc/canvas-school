@@ -21,3 +21,13 @@
     class="col-12 col-sm-12 col-md-5 col-lg-4"
   ></app-service-card>
 </div>
+
+<hr />
+<h3>Cities cards</h3>
+<div class="row">
+  <app-city-card
+  *ngFor="let item of configCityCard"
+  [configCity]="item"
+  class="col-12 col-sm-12 col-md-5 col-lg-4"
+  ></app-city-card>
+</div>
