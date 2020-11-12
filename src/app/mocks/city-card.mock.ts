@@ -1,6 +1,6 @@
 import { CitiesCardModel } from "../models/cities-card.model";
 
-export class CitiesCardMock {
+export class CityCardMock {
     public static getCities(): CitiesCardModel[] {
         return [
             {
@@ -13,7 +13,8 @@ export class CitiesCardMock {
                 img: '../../../assets/img/Barranquilla-catedral.jpg',
                 city_name: 'Barranquilla',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel bibendum nulla. Mauris nec massa sodales, egestas mauris at, ornare tellus.',
-                subtitle: 'Capital del Atlántico'
+                subtitle: 'Capital del Atlántico',
+                labelBtn: 'See more'
             },
             {
                 img: '../../../assets/img/bogotaSkyview.jpg',

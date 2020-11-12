@@ -3,4 +3,5 @@ export interface CitiesCardModel{
     city_name :string;
     subtitle :string;
     description: string;
+    labelBtn?: string;
 }

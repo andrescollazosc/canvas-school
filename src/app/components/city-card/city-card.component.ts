@@ -10,9 +10,18 @@ export class CityCardComponent implements OnInit {
 
   @Input() configCity : CitiesCardModel;
 
-  constructor() { }
-
   ngOnInit(): void {
+    if (!this.configCity) {
+      throw new Error("configCity is requiered.");      
+    }
+  }
+
+  public sendInfo(value: boolean): void {
+    if (value) {
+      alert('Hola mundo');
+    } else {
+      alert('No paso nada');      
+    }
   }
 
 }

@@ -4,7 +4,7 @@ import { PrimaryCardMock } from '../../mocks/primary-card.mock';
 import { ServiceCardMock } from '../../mocks/service-card.mocks';
 import { ServiceCardModel } from '../../models/service-card.model';
 import { CitiesCardModel } from 'src/app/models/cities-card.model';
-import { CitiesCardMock } from 'src/app/mocks/cities-card.mock';
+import { CityCardMock } from 'src/app/mocks/city-card.mock';
 
 @Component({
   selector: 'app-cards-page',
@@ -16,7 +16,7 @@ export class CardsPageComponent implements OnInit {
   public configCard: PrimaryCardModel[] = PrimaryCardMock.getPeople();
   public configServiceCard: ServiceCardModel = ServiceCardMock.getServices();
 
-  public configCityCard: CitiesCardModel[] = CitiesCardMock.getCities();
+  public configCityCard: CitiesCardModel[] = CityCardMock.getCities();
 
   ngOnInit(): void {}
 

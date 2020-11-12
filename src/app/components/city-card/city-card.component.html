@@ -1,22 +1,29 @@
 <div class="container-card">
-    <div class="container-close">
-        <i class="fas fa-times"></i>
+  <div class="container-card__close-icon">
+    <i class="fas fa-times"></i>
+  </div>
+  <div class="container-card__img-icon container-card__top-borders">
+    <img
+      [src]="configCity.img"
+      class="container-card__top-borders"
+      alt="Catedral Popayan"
+    />
+  </div>
+  <div class="container-card__container-text">
+    <div class="container-card__city">
+      {{ configCity.city_name }}
     </div>
-    <div class="container-img">
-        <img [src]="configCity.img" alt="Catedral Popayan">
+    <div class="container-card__subtitle">
+      {{ configCity.subtitle }}
     </div>
-    <div class="container-text">
-        <div class="city">
-            {{configCity.city_name}}
-        </div>
-        <div class="subtitle">
-            {{configCity.subtitle}}
-        </div>
-        <div class="text">
-            <p>{{configCity.description}}</p>            
-        </div>
+    <div class="container-card__text">
+      <p>{{ configCity.description }}</p>
     </div>
-    <div class="container-btn">
-        <app-button-google></app-button-google>
-    </div>
+  </div>
+  <div class="container-card__container-btn">
+    <app-button-google
+      (resultEvent)="sendInfo($event)"
+      [labelBtn]="configCity.labelBtn"
+    ></app-button-google>
+  </div>
 </div>
