@@ -1,7 +1,12 @@
 <div class="container-card">
-  <div class="container-card__close-icon">
+  <div (click)="closeCard(configCity)" class="container-card__close-icon">
     <i class="fas fa-times"></i>
   </div>
+
+  <div class="container-card__plane-icon">
+    <i class="fas fa-paper-plane"></i>
+  </div>
+
   <div class="container-card__img-icon container-card__top-borders">
     <img
       [src]="configCity.img"

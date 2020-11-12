@@ -27,6 +27,7 @@
 <div class="row">
   <app-city-card
   *ngFor="let item of configCityCard"
+  (closeEvent)="onClose($event)"
   [configCity]="item"
   class="col-12 col-sm-12 col-md-5 col-lg-4"
   ></app-city-card>

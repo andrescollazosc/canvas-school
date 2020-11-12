@@ -24,4 +24,11 @@ export class CardsPageComponent implements OnInit {
     alert(JSON.stringify(value.id));
   }
 
+  public onClose(id: string):void{
+    this.configCityCard.forEach((city,i)=>{
+      if (city.id==id) {
+        this.configCityCard.splice(i,1);
+      }
+    });
+  }
 }
