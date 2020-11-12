@@ -1,0 +1,79 @@
+@import '../../styles/base';
+@import '../../styles/typography';
+
+.container-card{
+    height: 500px;
+    width: 100%;
+    background-color: $dark-gray;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.container-img{
+    height: 40%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.container-img img{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.container-text{
+    padding: 24px;
+    color: $white-google;
+}
+
+.city{
+    font-size: 22px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+}
+
+.subtitle{
+    margin-top: 4px;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    color: $sky-gray-google;
+}
+
+.text{
+    margin-top: 16px;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+}
+
+.container-btn{
+    padding-left: 20px;
+}
+
+.container-close{
+    height: 40px;
+    width: 40px;
+    color: $white-google;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    text-align: center;
+    padding: 7px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.container-close:hover{
+    opacity: 0.4;
+    border:1px solid $white-google;
+}
+
+.container-close i{
+    font-size: 22px;
+}
+

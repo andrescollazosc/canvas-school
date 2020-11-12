@@ -1,0 +1,22 @@
+<div class="container-card">
+    <div class="container-close">
+        <i class="fas fa-times"></i>
+    </div>
+    <div class="container-img">
+        <img [src]="configCity.img" alt="Catedral Popayan">
+    </div>
+    <div class="container-text">
+        <div class="city">
+            {{configCity.city_name}}
+        </div>
+        <div class="subtitle">
+            {{configCity.subtitle}}
+        </div>
+        <div class="text">
+            <p>{{configCity.description}}</p>            
+        </div>
+    </div>
+    <div class="container-btn">
+        <app-button-google></app-button-google>
+    </div>
+</div>
