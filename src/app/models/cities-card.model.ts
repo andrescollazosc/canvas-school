@@ -5,4 +5,5 @@ export interface CitiesCardModel{
     subtitle :string;
     description: string;
     labelBtn?: string;
+    searchTerm: string;
 }
