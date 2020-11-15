@@ -1,0 +1,28 @@
+<div class="container-promo-card">
+  <div class="container-promo-card__container-image">
+    <img src="../../../assets/img/products/leche-polvo-bolsa.jpg" alt="" />
+  </div>
+
+  <div (click)="openOrCLoseMenu()" class="container-promo-card__icon-menu">
+      <i class="fas fa-ellipsis-v"></i>
+  </div>
+
+  <div *ngIf="isClosed" class="menu">
+      <div class="container-menu">
+          <div class="menu__item">* Eliminar</div>
+          <div class="menu__item">* Cancelar</div>
+          <div class="menu__item">* Agregar</div>
+          <div class="menu__item">* Ver</div>
+      </div>
+      <div (click)="openOrCLoseMenu()" class="menu__icon-close-menu">
+        <i class="fas fa-times"></i>
+      </div>
+  </div>
+
+  <div class="container-promo-card__title">Leche Parmalat</div>
+
+  <div class="container-promo-card__weight">1 Litro</div>
+
+  <div class="container-promo-card__price">$3000</div>
+
+</div>

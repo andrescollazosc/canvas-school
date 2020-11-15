@@ -10,6 +10,7 @@ import { ButtonDarkComponent } from './components/button-dark/button-dark.compon
 import { ServiceCardComponent } from './components/service-card/service-card.component';
 import { CityCardComponent } from './components/city-card/city-card.component';
 import { ButtonGoogleComponent } from './components/button-google/button-google.component';
+import { PromoCardComponent } from './components/promo-card/promo-card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ButtonGoogleComponent } from './components/button-google/button-google.
     ButtonDarkComponent,
     ServiceCardComponent,
     CityCardComponent,
-    ButtonGoogleComponent
+    ButtonGoogleComponent,
+    PromoCardComponent
   ],
   imports: [
     BrowserModule,
