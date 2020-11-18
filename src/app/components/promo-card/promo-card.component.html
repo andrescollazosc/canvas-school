@@ -1,28 +1,26 @@
 <div class="container-promo-card">
   <div class="container-promo-card__container-image">
-    <img src="../../../assets/img/products/leche-polvo-bolsa.jpg" alt="" />
+    <img [src]="promoCard.img" alt="" />
   </div>
-
-  <div (click)="openOrCLoseMenu()" class="container-promo-card__icon-menu">
-      <i class="fas fa-ellipsis-v"></i>
+  <div *ngIf="promoCard.menuItems" (click)="openOrCLoseMenu()" class="container-promo-card__icon-menu">
+    <i class="fas fa-ellipsis-v"></i>
   </div>
-
   <div *ngIf="isClosed" class="menu">
-      <div class="container-menu">
-          <div class="menu__item"><i class="fas fa-angle-right"></i> Eliminar</div>
-          <div class="menu__item"><i class="fas fa-angle-right"></i> Cancelar</div>
-          <div class="menu__item"><i class="fas fa-angle-right"></i> Agregar</div>
-          <div class="menu__item"><i class="fas fa-angle-right"></i> Ver</div>
+    <div class="container-menu">
+      <div *ngFor="let item of promoCard.menuItems" class="menu__item"
+      (click)="onClickEmmitter(promoCard.id,item.id)"
+      >
+        <i class="fas fa-angle-right"></i> {{item.name}}
       </div>
-      <div  class="menu__icon-close-menu">
-        <i (click)="openOrCLoseMenu()" class="fas fa-times menu__pointer-close"></i>
-      </div>
+    </div>
+    <div class="menu__icon-close-menu">
+      <i
+        (click)="openOrCLoseMenu()"
+        class="fas fa-times menu__pointer-close"
+      ></i>
+    </div>
   </div>
-
-  <div class="container-promo-card__title">Leche Parmalat</div>
-
-  <div class="container-promo-card__weight">1 Litro</div>
-
-  <div class="container-promo-card__price">$3000</div>
-
+  <div class="container-promo-card__title">{{ promoCard.name }}</div>
+  <div class="container-promo-card__weight">{{ promoCard.size }}</div>
+  <div class="container-promo-card__price">${{ promoCard.price }}</div>
 </div>

@@ -27,7 +27,7 @@
 <div class="row">
   <app-city-card
   *ngFor="let item of configCityCard"
-  (closeEvent)="onClose($event)"
+  (closeEvent)="removeCityCard($event)"
   [configCity]="item"
   class="col-12 col-sm-12 col-md-5 col-lg-4"
   ></app-city-card>
@@ -37,10 +37,12 @@
 <h3>Promos Card</h3>
 
 <div class="row">
-  <app-promo-card class="col-12 col-sm-12 col-md-5 col-lg-4"></app-promo-card>
-  <app-promo-card class="col-12 col-sm-12 col-md-5 col-lg-4"></app-promo-card>
-  <app-promo-card class="col-12 col-sm-12 col-md-5 col-lg-4"></app-promo-card>
-  <app-promo-card class="col-12 col-sm-12 col-md-5 col-lg-4"></app-promo-card>
+  <app-promo-card
+  *ngFor="let card of promoCardMock"
+    [promoCard]="card"
+    (resultEmittedMenu)="onClickPromo($event)"
+   class="col-12 col-sm-12 col-md-5 col-lg-4"
+   ></app-promo-card>
 </div>
 
 
