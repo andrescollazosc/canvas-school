@@ -11,6 +11,8 @@ import { ServiceCardComponent } from './components/service-card/service-card.com
 import { CityCardComponent } from './components/city-card/city-card.component';
 import { ButtonGoogleComponent } from './components/button-google/button-google.component';
 import { PromoCardComponent } from './components/promo-card/promo-card.component';
+import { PaginatorsComponent } from './pages/paginators/paginators.component';
+import { LinePaginationComponent } from './components/line-pagination/line-pagination.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PromoCardComponent } from './components/promo-card/promo-card.component
     ServiceCardComponent,
     CityCardComponent,
     ButtonGoogleComponent,
-    PromoCardComponent
+    PromoCardComponent,
+    PaginatorsComponent,
+    LinePaginationComponent
   ],
   imports: [
     BrowserModule,
