@@ -6,10 +6,11 @@
     box-shadow: 0 10px 20px 0 rgba(black, 0.25);
     font-family: Roboto, sans-serif;
     padding: 0 15px 0 15px;
+    border-radius: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
 
     &__item {
         text-align: center;
