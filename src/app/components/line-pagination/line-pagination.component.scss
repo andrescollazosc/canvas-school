@@ -26,4 +26,10 @@
         color: dodgerblue;
         border-bottom: 5px solid dodgerblue;
     }
+
+    &__item:focus{
+        color: white;
+        background-color: dodgerblue;
+        border-bottom: 5px solid dodgerblue;
+    }
 }

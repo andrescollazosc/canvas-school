@@ -26,28 +26,32 @@ export class LinePaginationComponent implements OnInit {
   private validateModel(): void {
     if (!this.paginationModel) {
       this.paginationModel = {
-        quantityPages: 20,
+        quantityPages: 11,
         splitter: 4,
       };
     }
   }
 
   public nextPage(): void {
-    this.initPos = this.initPos+this.paginationModel.splitter;
-    this.finalPos = this.finalPos+this.paginationModel.splitter;
+    this.initPos = this.initPos + this.paginationModel.splitter;
+    this.finalPos = this.finalPos + this.paginationModel.splitter;
+
     if (this.finalPos > this.paginationModel.quantityPages) {
       return;
     }
-    this.loadItems(this.initPos,this.finalPos);
+
+    this.loadItems(this.initPos, this.finalPos);
   }
 
   public prevPage(): void {
-    this.initPos = this.initPos-this.paginationModel.splitter;
-    this.finalPos = this.finalPos-this.paginationModel.splitter;
-    if (this.initPos<1) {
+    this.initPos = this.initPos - this.paginationModel.splitter;
+    this.finalPos = this.finalPos - this.paginationModel.splitter;
+
+    if (this.initPos < 1) {
       return;
     }
-    this.loadItems(this.initPos,this.finalPos);
+
+    this.loadItems(this.initPos, this.finalPos);
   }
 
   private loadItems(initValue: number, length: number): void {
