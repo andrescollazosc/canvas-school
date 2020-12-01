@@ -13,6 +13,8 @@ import { ButtonGoogleComponent } from './components/button-google/button-google.
 import { PromoCardComponent } from './components/promo-card/promo-card.component';
 import { PaginatorsComponent } from './pages/paginators/paginators.component';
 import { LinePaginationComponent } from './components/line-pagination/line-pagination.component';
+import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.component';
+import { TablesComponent } from './pages/tables/tables.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { LinePaginationComponent } from './components/line-pagination/line-pagin
     ButtonGoogleComponent,
     PromoCardComponent,
     PaginatorsComponent,
-    LinePaginationComponent
+    LinePaginationComponent,
+    DynamicTableComponent,
+    TablesComponent
   ],
   imports: [
     BrowserModule,

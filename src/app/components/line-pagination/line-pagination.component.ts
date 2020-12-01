@@ -10,9 +10,8 @@ export class LinePaginationComponent implements OnInit {
   @Input() paginationModel: LinePaginationModel;
 
   public paginationItems = [];
-
   public initPos = 1;
-  public finalPos = 4;
+  public finalPos = 0;
 
   ngOnInit(): void {
     this.initializeData();
@@ -20,38 +19,38 @@ export class LinePaginationComponent implements OnInit {
 
   private initializeData(): void {
     this.validateModel();
-    this.loadItems(1, this.paginationModel.splitter);
+    this.finalPos = this.paginationModel.splitter;
+    this.loadItems(this.initPos, this.finalPos);
   }
 
   private validateModel(): void {
     if (!this.paginationModel) {
       this.paginationModel = {
-        quantityPages: 11,
-        splitter: 4,
+        quantityPages: 20,
+        splitter: 7,
       };
     }
   }
 
   public nextPage(): void {
-    this.initPos = this.initPos + this.paginationModel.splitter;
-    this.finalPos = this.finalPos + this.paginationModel.splitter;
-
-    if (this.finalPos > this.paginationModel.quantityPages) {
+    if (this.finalPos >= this.paginationModel.quantityPages) {
       return;
     }
-
-    this.loadItems(this.initPos, this.finalPos);
+    
+    this.initPos = this.initPos+this.paginationModel.splitter;
+    this.finalPos = this.finalPos+this.paginationModel.splitter;
+    this.finalPos = this.finalPos>this.paginationModel.quantityPages ? this.paginationModel.quantityPages:this.finalPos;
+    this.loadItems(this.initPos,this.finalPos);
   }
 
   public prevPage(): void {
-    this.initPos = this.initPos - this.paginationModel.splitter;
-    this.finalPos = this.finalPos - this.paginationModel.splitter;
-
-    if (this.initPos < 1) {
+    if (this.initPos < this.paginationModel.splitter) {
       return;
     }
 
-    this.loadItems(this.initPos, this.finalPos);
+    this.initPos = this.initPos-this.paginationModel.splitter;
+    this.finalPos = this.validateRecursive(this.finalPos)-this.paginationModel.splitter;
+    this.loadItems(this.initPos,this.finalPos);
   }
 
   private loadItems(initValue: number, length: number): void {
@@ -59,5 +58,13 @@ export class LinePaginationComponent implements OnInit {
     for (let i = initValue; i <= length; i++) {
       this.paginationItems.push(i);
     }
+  }
+
+  private validateRecursive(value: number): number{
+    let res=0;
+    const operation = value % this.paginationModel.splitter;
+    res = operation!==0 ? this.validateRecursive(value+1) : value;
+
+    return res;
   }
 }
